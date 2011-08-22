@@ -6,11 +6,14 @@ $(function() {
   GRAVITY = 12 / FRAMERATE;
   NUMNODES = 1000;
 
+  var cwidth = $(window).width(),
+			cheight = $(window).height()
+
   canvas = document.getElementById("world");
   ctx = canvas.getContext("2d");
 
-  ctx.Style = "rgb(255, 255, 255)";
-  ctx.fillRect(0, 0, 445, 445);
+  ctx.Style = "rgb(0, 0, 0)";
+  ctx.fillRect(0, 0, cwidth, cheight);
 
   node =  {
     init: function(xp, yp){
@@ -42,17 +45,17 @@ $(function() {
           this.dy = this.dy + GRAVITY;
           xpos = xpos + this.dx;
           ypos = ypos + this.dy;
-          xpos = xpos > 443 ? 443 : xpos;
-          ypos = ypos > 443 ? 443 : ypos;
+          xpos = xpos > cwidth - 2 ? cwidth - 2 : xpos;
+          ypos = ypos > cheight - 2 ? cheight - 2 : ypos;
           xpos = xpos < 0 ? 0 : xpos;
           ypos = ypos < 4 ? 0 : ypos;
           this.xpos = xpos;
           this.ypos = ypos;
 
 
-          if (ypos <= 2 || ypos >= 443){this.dy = -this.dy + 5 + ywobble;}
+          if (ypos <= 2 || ypos >= cheight - 2){this.dy = -this.dy + 5 + ywobble;}
                 if (xpos <= 2){this.dx = -this.dx + xwobble;}
-          else if (xpos >= 443){this.dx = -this.dx - xwobble;}
+          else if (xpos >= cwidth - 2){this.dx = -this.dx - xwobble;}
       
           
           this.alpha = this.alpha - 0.01;
@@ -64,8 +67,8 @@ $(function() {
   animate = function() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "rgb(255, 255, 255)";
-    ctx.fillRect(0, 0, 460, 460);
+    ctx.fillStyle = "rgb(0, 0, 0)";
+    ctx.fillRect(0, 0, cwidth, cheight);
 
     _.each(nodearray, function(node){
     node.move();

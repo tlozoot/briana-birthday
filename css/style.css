@@ -1,4 +1,18 @@
+body {
+	text-align: center;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+h1 {
+	font-size: 2em;
+}
+
 #world {
-	width: 800px;
-	height: 600px;
+	width: 100%;
+	height: 100%;
+}
+
+a, a:visited {
+	color: #ffffff;
 }
