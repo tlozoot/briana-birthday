@@ -1,0 +1,138 @@
+body {
+	font-family: Georgia, Times, Serif;
+}
+
+p, li {
+	line-height: 1.5;
+}
+
+article > p:first-child {
+	margin-top: 0;
+	font-size: 1.2em;
+}
+
+article > *:last-child {
+/*	margin-bottom: 150px;*/
+}
+
+ul.projects li p:last-child {
+	margin-bottom: 0;
+}
+
+a, a:visited {
+	color: #2A3DA3;
+	text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+	background-color: #eeeeee;
+	top: 0;
+	padding: 20px 20px 20px 240px;
+	border-bottom: 2px solid #bbbbbb;
+	font-weight: bold;
+}
+
+header a {
+	font-weight: normal;
+}
+
+nav {
+	display: block;
+	float: left;
+	width: 200px;
+	position: fixed;
+	text-align: left;
+	margin: 20px 0 20px 20px;
+}
+
+nav > a {
+	display: block;
+	padding: 10px;
+}
+
+nav > a.selected {
+	color: white;
+}
+
+body.dense {
+	font-size: 0.9em;
+}
+body.dense header {
+	padding: 10px 10px 10px 175px;
+}
+body.dense nav {
+	width: 150px;
+	margin: 10px 0 10px 10px;
+}
+body.dense nav > a {
+  padding: 5px;
+}
+body.dense article {
+	padding: 10px;
+	margin-left: 166px;
+}
+body.dense ul.projects li {
+	padding: 10px;
+	margin-bottom: 0.5em;
+}
+body.dense ul.projects li h3 {
+	font-size: 1.3em;
+}
+body.dense p {
+	margin: 0.5em 0;
+}
+
+#transition {
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	color: white;
+	font-size: 0.8em;
+	cursor: pointer;
+	background-color: #aaaaaa;
+	padding: 10px;
+}
+
+article {
+	margin-left: 220px;
+	padding: 20px;
+	max-width: 800px;
+	min-width: 400px;
+/*	background-color: rgba(255, 255, 255, 0.75);*/
+}
+
+ul.projects {
+	margin: 0;
+	padding: 0;
+}
+
+ul.projects li {
+	list-style-type: none;
+	padding: 15px;
+	margin-bottom: 1em;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	
+	background-color: rgba(0, 0, 0, 0.1);
+	display: block;
+}
+
+ul.projects li > p:first-child {
+	float: right;
+	font-size: 0.8em;
+	color: #666666;
+	margin-top: 0;
+}
+
+ul.projects li h3 {
+	font-weight: normal;
+	margin: 0 0 0.5em 0;
+	font-size: 1.5em;
+}
+
+ul.minilist {
+	font-size: 0.8em;
+}
